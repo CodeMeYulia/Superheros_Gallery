@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', function(event){
+   document.addEventListener('DOMContentLoaded', function(event){
         let heroes = [
             {
                 name: 'Бетмен',
@@ -109,9 +109,7 @@
         ];
         const heroesJSON = JSON.stringify(heroes);
         heroes = JSON.parse(heroesJSON);
-        console.log(heroes);
-        hr = localStorage.getItem('.label_rating')
-
+   
 
 for (let i=0; i < heroes.length; i++) {
     function createCard(){
@@ -129,29 +127,29 @@ for (let i=0; i < heroes.length; i++) {
         <div class="img__container"><img class="image" src="${heroes[i].url}" alt="${heroes[i].name}"></div>
         <div class="info">${heroes[i].info}</div>
             
-        <div class="simple-rating">
-                    <div class="simple-rating__items">
-                        <input id="simple-rating__5" type="radio" class="simple-rating__item" name="simple-rating"
+        <div class="rating">
+                    <div class="stars">
+                        <input id="rating__5" type="radio" class="star" name="rating"
                             value="5">
-                        <label for="simple-rating__5" class="simple-rating__label"></label>
-                        <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
+                        <label for="rating__5" class="star__label"></label>
+                        <input id="rating__4" type="radio" class="star" name="rating"
                             value="4">
-                        <label for="simple-rating__4" class="simple-rating__label"></label>
-                        <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
+                        <label for="rating__4" class="star__label"></label>
+                        <input id="rating__3" type="radio" class="star" name="rating"
                             value="3">
-                        <label for="simple-rating__3" class="simple-rating__label"></label>
-                        <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
+                        <label for="rating__3" class="star__label"></label>
+                        <input id="rating__2" type="radio" class="star" name="rating"
                             value="2">
-                        <label for="simple-rating__2" class="simple-rating__label"></label>
-                        <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
+                        <label for="rating__2" class="star__label"></label>
+                        <input id="rating__1" type="radio" class="star" name="rating"
                             value="1">
-                        <label for="simple-rating__1" class="simple-rating__label"></label>
+                        <label for="rating__1" class="star__label"></label>
                     </div>
             </div>
         </div>
         `;
 }
 createCard();
-}
 
-});
+}
+});   
