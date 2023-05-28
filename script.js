@@ -150,13 +150,11 @@ for (let i=0; i < heroes.length; i++) {
             </form>
         </div>
         `;
-     
 }
 createCard();
 
 }
 });   
-
 
 // const stars = document.querySelector('.rating');
 
