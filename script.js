@@ -152,7 +152,6 @@ for (let i=0; i < heroes.length; i++) {
         `;
 }
 createCard();
-
 }
 });   
 
