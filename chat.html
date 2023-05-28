@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./chat.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chat__container">
+        <h1>Chat</h1>
+        <div id="chat">
+
+        </div>
+
+        <form>
+            <div>
+                <label for="author">Имя*
+                    <span id="authorError"></span>
+                </label>
+            </div>
+            <div>
+                <input type="text" name="author" id="author" value="" class="inputs" />
+            </div>
+            <div>
+                <label for="comment">Комментарий:
+                    <span id="commentError"></span>
+                </label>
+            </div>
+            <div>
+                <textarea name="comment" id="comment" class="inputs"></textarea>
+            </div>
+            <div>
+                <input name="button" type="button" id="button" value="Otpravit" onclick="checkMessage();" />
+            </div>
+        </form>
+
+        <div class="rait">
+            <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="./chat.js"></script>
+</body>
+
+</html>
