@@ -1,5 +1,6 @@
-   document.addEventListener('DOMContentLoaded', function(event){
-        let heroes = [
+document.addEventListener('DOMContentLoaded', function(event){
+    //отрисовка при загрузке страницы
+     let heroes = [
             {
                 name: 'Бетмен',
                 universe: 'DC Comics',
@@ -106,14 +107,15 @@
                 url: 'https://n1s1.hsmedia.ru/34/93/39/3493392c94fc2ae0552ef9c7e87f2617/728x382_1_cc2a743fd686b7b2e256c062966bb465@1034x543_0xac120002_2692921231540468872.jpg',
                 info: 'Как и Росомаха из Людей Икс, Дэдпул был подвергнут опытам по программе «Оружие Икс». Ученые попытались исцелить его рак, привив его клеткам способность к регенерации. Как и всегда в комиксах, что-то пошло не так, и Дэдпул остался изуродованным и психически нестабильным. Это единственный супергерой из списка, который однозначно не на стороне добра. Дэдпул наслаждается насилием. Первоначально появившись в основной Вселенной Marvel, он получил альтернативные варианты в других реальностях Мультивселенной. Что оставалось неизменным — его циничное, чёрное чувство юмора: за него Дэдпула прозвали «Болтливым наёмником»',
             },
-        ];
-        const heroesJSON = JSON.stringify(heroes);
-        heroes = JSON.parse(heroesJSON);
+     ];
+     const heroesJSON = JSON.stringify(heroes);
+     heroes = JSON.parse(heroesJSON);
    
-
+//цикл для каждого объекта массива героев
 for (let i=0; i < heroes.length; i++) {
     function createCard(){
         document.querySelector('.gallery__items').innerHTML += 
+        //создаем карточку с блоками информации и звездами
         `
         <div class="gallery__item">
         <h2 class="name">${heroes[i].name}</h2>
@@ -126,8 +128,8 @@ for (let i=0; i < heroes.length; i++) {
         </div>
         <div class="img__container"><img class="image" src="${heroes[i].url}" alt="${heroes[i].name}"></div>
         <div class="info">${heroes[i].info}</div>
-            
-        <div class="rating">
+       
+        <form class="rating">
                     <div class="stars">
                         <input id="rating__5" type="radio" class="star" name="rating"
                             value="5">
@@ -145,11 +147,25 @@ for (let i=0; i < heroes.length; i++) {
                             value="1">
                         <label for="rating__1" class="star__label"></label>
                     </div>
-            </div>
+            </form>
         </div>
         `;
+     
 }
 createCard();
 
 }
 });   
+
+
+// const stars = document.querySelector('.rating');
+
+// stars.addEventListener('click', function(e) {
+//     if (e.target.classList.contains(".star")) {
+//         console.log('mao');
+
+       
+//         localStorage.setItem(key,value);
+//     }
+// })
+

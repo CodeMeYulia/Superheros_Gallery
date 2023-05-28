@@ -106,14 +106,16 @@ color: rgb(155, 155, 155);
     transition: color 0.3s ease 0s;
 }
 
-
+/* меняем стиль кликнутых звезд и тех, что перед ними */
 .star:checked,
 .star:checked ~ .star__label {
     color: rgb(226, 250, 9);
 }
 
+/* меняем стиль по наведению мыши звезд и тех, что перед ними */
 .star__label:hover,
 .star__label:hover ~ .star__label,
 .star__label:checked ~ .star__label:hover {
     color: rgb(228, 34, 154);
 }
+
